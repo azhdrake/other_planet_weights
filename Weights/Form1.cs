@@ -16,7 +16,7 @@ namespace Weights
     public Form1()
     {
       InitializeComponent();
-
+      // You make a sortedlist and you add the conversions to it
       WeightConversionFactors.Add("Mercury", 0.3772);
       WeightConversionFactors.Add("Venus"  , 0.9042);
       WeightConversionFactors.Add("Mars"   , 0.3783);
@@ -24,6 +24,7 @@ namespace Weights
 
     private void btnConvert_Click(object sender, EventArgs e)
     {
+      // Real basic math is done + displayed
       double earthWeight = Convert.ToDouble(txtEarthWeight.Text);
       double mercuryWeight = earthWeight * WeightConversionFactors["Mercury"];
       double venusWeight = earthWeight * WeightConversionFactors["Venus"];
